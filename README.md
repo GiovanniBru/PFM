@@ -3,12 +3,12 @@
 
 <h2>Sumário</h2>
 <ol>
-	<li><a href="">Introdução</a></li>
-	<li><a href="">Definição do Problema</a></li>
-	<li><a href="">Modelagem</a></li>
-	<li><a href="">Instruções</a></li>
-	<li><a href="">Conclusão</a></li>
-	<li><a href="">Referências</a></li>
+	<li><a href="https://github.com/GiovanniBru/PFM#introdu%C3%A7%C3%A3o">Introdução</a></li>
+	<li><a href="https://github.com/GiovanniBru/PFM#defini%C3%A7%C3%A3o-do-problema">Definição do Problema</a></li>
+	<li><a href="https://github.com/GiovanniBru/PFM#modelagem">Modelagem</a></li>
+	<li><a href="https://github.com/GiovanniBru/PFM#instru%C3%A7%C3%B5es">Instruções</a></li>
+	<li><a href="https://github.com/GiovanniBru/PFM#conclus%C3%A3o">Conclusão</a></li>
+	<li><a href="https://github.com/GiovanniBru/PFM#refer%C3%AAncias">Referências</a></li>
 </ol>
 
 <h2>Introdução</h2> 
@@ -32,11 +32,11 @@ O trabalho consiste em implementar a modelagem do Problema do Fluxo Máximo (PFM
   <li> uij - Capacidade máxima da aresta i → j;
 </ul>
 <p><b> Objetivo:</b> </p>
-<img src = "">
+<img src = "https://github.com/GiovanniBru/PFM/blob/master/imagens/FO.PNG">
 <p><b> Restrições:</b> </p>
-<img src = "">
+<img src = "https://github.com/GiovanniBru/PFM/blob/master/imagens/restricoes.PNG">
  <p> Podemos ver abaixo um exemplo do PFM em uma companhia de saneamento que transporta água potável por meio de uma malha de aquedutos. A companhia busca determinar o fluxo máximo de água (em m³/s) que pode ser transportado na rede da Figura 1. A rede tem como nó de origem (O) uma estação no Norte de Minas e como nó de destino (T) um consumidor final localizado na região central do estado de São Paulo. Os valores nos arcos representam as capacidades máximas em cada arco (em m³/s).</p>
- <img src = "">
+ <img src = "https://github.com/GiovanniBru/PFM/blob/master/imagens/figura1.PNG">
  <p> Para resolver esse problema, primeiro definimos as variáveis de decisão do modelo:</p>
  <p><b> Xij = fluxo de água no arco (i,j), ∀ i,j </b> </p>
 <p> Assim, temos 8 variáveis de decisão, cada uma representando um arco, como por exemplo Xoa que é o fluxo da estação de origem até a estação A.</p>
@@ -73,8 +73,8 @@ O trabalho consiste em implementar a modelagem do Problema do Fluxo Máximo (PFM
 <p> 3. Criar um arco de ligação entre o nó de suprimento (origem) e o nó de demanda (escoadouro), com o custo unitário grande (M). </p>
 <p> Em razão de criarmos esse custo unitário positivo para o arco de ligação e atribuirmos o custo unitário zero para todos os demais, o PFCM enviará o fluxo
 viável máximo através dos arcos de transshipment, o que faz alcançar o objetivo do PFM. Na Figura 2 podemos observar uma rede do Seervada Park, como exemplo, antes da aplicação dessas transformações, e na Figura 3 observamos a mesma após as transformações.</p>
-<img src = "">
-<img src = "">
+<img src = "https://github.com/GiovanniBru/PFM/blob/master/imagens/figura2.PNG">
+<img src = "https://github.com/GiovanniBru/PFM/blob/master/imagens/figura3.PNG">
 
 <h2>Instruções</h2> 
 <p> O código foi desenvolvido na linguagem Python, usando o ambiente Spyder do Anaconda 3. A versão do Python utilizada foi a 3.7. O algoritmo se encontra no arquivo “PFM.py” anexado e para rodá-lo é necessário fazer as seguintes importações no Prompt do Anaconda, ou no terminal do Sistema Operacional:</p>
@@ -90,8 +90,8 @@ viável máximo através dos arcos de transshipment, o que faz alcançar o objet
 <h2>Conclusão</h2> 
 <p>O objetivo do trabalho foi alcançado, em ordem o algoritmo lê: o número de vértices, número de arcos, índice da origem, índice do escoadouro, e os dados de cada arco (direção e custo). A saída do algoritmo exibe na tela a solução ótima do PFM e também os grafos utilizados e seus fluxos.</p>
 <p> Nas figuras abaixo temos dois exemplos de execução do algoritmo. </p>
-<img src = "">
-<img src = "">
+<img src = "https://github.com/GiovanniBru/PFM/blob/master/imagens/figura4.PNG">
+<img src = "https://github.com/GiovanniBru/PFM/blob/master/imagens/figura5.PNG">
 <h2>Referências</h2> 
 <ul>
 	<li>HILLIER, Frederick S; LIEBERMAN, Gerald J.; GRIESI, Ariovaldo. Introdução à pesquisa operacional. 9.ed. Porto Alegre: AMGH,, 2013. 1005p. ISBN: 9788580551181.</li>
