@@ -67,4 +67,37 @@ O trabalho consiste em implementar a modelagem do Problema do Fluxo Máximo (PFM
 <p> Resolvendo esse PFM por meio de qualquer solver como simplex, ou por meio do código desenvolvido pelo trabalho, foi encontrado a <b>solução ótima de Z = 110 m³/s.</b> </p>
 
 <h2>Modelagem</h2> 
+<p> Foi requisitado que construíssemos um problema que resolva o PFM modelado como Problema de Fluxo de Custo Mínimo (PFCM). Para realizar a transformação do PFM no formato do PFCM foram necessárias três alterações:</p>
+<p> 1. Custo do arco (Cij) com valor igual a zero para todos os arcos existentes de modo a refletir a ausência de custos no PFM.</p>
+<p> 2. Selecionar um limite superior (F) seguro sobre o fluxo viável máximo da rede, para servir de parâmetro aos nós de suprimento e demanda. </p>
+<p> 3. Criar um arco de ligação entre o nó de suprimento (origem) e o nó de demanda (escoadouro), com o custo unitário grande (M). </p>
+<p> Em razão de criarmos esse custo unitário positivo para o arco de ligação e atribuirmos o custo unitário zero para todos os demais, o PFCM enviará o fluxo
+viável máximo através dos arcos de transshipment, o que faz alcançar o objetivo do PFM. Na Figura 2 podemos observar uma rede do Seervada Park, como exemplo, antes da aplicação dessas transformações, e na Figura 3 observamos a mesma após as transformações.</p>
+<img src = "">
+<img src = "">
+
+<h2>Instruções</h2> 
+<p> O código foi desenvolvido na linguagem Python, usando o ambiente Spyder do Anaconda 3. A versão do Python utilizada foi a 3.7. O algoritmo se encontra no arquivo “PFM.py” anexado e para rodá-lo é necessário fazer as seguintes importações no Prompt do Anaconda, ou no terminal do Sistema Operacional:</p>
+<ul>
+  <li> $ sudo apt-get install python3 </li>
+  <li> $ sudo apt-get install python3-pip</li>
+  <li> $ pip install --upgrade --user ortools</li>
+  <li> $ pip install python-igraph</li>
+  <li> $ pip install pycairo </li>
+</ul>
+<p> Caso esteja no linux, é necessário instalar o python 3 e pip usando as duas primeiras chamadas de função no terminal.</p>
+<p> A terceira importação é referente ao pacote de programação linear OR-Tools, disponível pelo Google, cuja referência está anexada no sétimo tópico ‘Bibliografia’. As outras importações são referentes aos pacotes necessários para visualização do grafo.</p>
+<h2>Conclusão</h2> 
+<p>O objetivo do trabalho foi alcançado, em ordem o algoritmo lê: o número de vértices, número de arcos, índice da origem, índice do escoadouro, e os dados de cada arco (direção e custo). A saída do algoritmo exibe na tela a solução ótima do PFM e também os grafos utilizados e seus fluxos.</p>
+<p> Nas figuras abaixo temos dois exemplos de execução do algoritmo. </p>
+<img src = "">
+<img src = "">
+<h2>Referências</h2> 
+<ul>
+	<li>HILLIER, Frederick S; LIEBERMAN, Gerald J.; GRIESI, Ariovaldo. Introdução à pesquisa operacional. 9.ed. Porto Alegre: AMGH,, 2013. 1005p. ISBN: 9788580551181.</li>
+	<li> <a href="https://developers.google.com/optimization/reference/python/linear_solver/pywraplp"> Referência do pacote de programação linear OR-Tools </a> </li>
+	<li> <a href="https://igraph.org/"> Referência do pacote igraph </a> </li>
+	<li> <a href="https://developers.google.com/optimization/lp/glop"> Referência Glop Linear Solver </a> </li>
+</ul>
+
 
